@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentor Merlin – NMC Flow Activity</title>
+    <!-- Import Google font for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Shared stylesheet for layout and theming -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Activity logic -->
+    <script defer src="activity.js"></script>
+    <!-- Favicon and touch icon -->
+    <link rel="icon" type="image/png" href="assets/MM_logo.png" />
+    <link rel="apple-touch-icon" href="assets/MM_logo.png" />
+</head>
+<body>
+    <!-- Simple header with brand logo -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/MM_logo.png" alt="Mentor Merlin Logo" />
+                <span class="brand">Mentor Merlin</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content: registration form and drag‑and‑drop activity -->
+    <main class="activity-container">
+        <div class="container">
+            <!-- Start section: prompt user to enter their name and email before beginning -->
+            <div id="activity-start" class="activity-content">
+                <h2>Welcome to the NMC Process Flow Activity</h2>
+                <p class="description">Please enter your name and email to begin arranging the steps of the NMC registration process.</p>
+                <div class="form-group">
+                    <label for="activityName">Your Name</label>
+                    <input type="text" id="activityName" placeholder="Enter your full name" required />
+                </div>
+                <div class="form-group">
+                    <label for="activityEmail">Email (used for identification)</label>
+                    <input type="email" id="activityEmail" placeholder="Enter your email" required />
+                </div>
+                <button id="startActivityBtn" class="btn">Start Activity</button>
+            </div>
+            <!-- Activity content: draggable tiles and submit button -->
+            <div id="activity-content" class="activity-content hidden">
+                <h2>Create the Correct NMC Process Flow</h2>
+                <p class="description">Drag the tiles below into the correct chronological order. When you are satisfied with your arrangement, click Submit to check your answer. Your result will be recorded.</p>
+                <div id="tilesContainer" class="tiles-container"></div>
+                <button id="submitActivity" class="btn">Submit</button>
+                <div id="activityResult" class="activity-result"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Mentor Merlin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Populate the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

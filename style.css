@@ -1,0 +1,173 @@
+/*
+ * style.css
+ *
+ * This stylesheet provides a clean, modern design for the Mentor Merlin
+ * NMC flow activity.  It borrows the colour palette from the existing
+ * Mentor Merlin branding and applies consistent padding, typography and
+ * responsive behaviour.  Feel free to modify the variables at the top
+ * of the file to adjust the look and feel.
+ */
+
+/* Colour and layout variables */
+:root {
+    --primary-color: #0c2d72; /* dark navy used by Mentor Merlin */
+    --accent-color: #0066cc;  /* bright blue accent */
+    --light-bg: #f7faff;      /* very light background */
+    --text-color: #333;
+    --pass-color: #2e8b57;
+    --fail-color: #d62828;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e6f7;
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.navbar .logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    text-align: center;
+}
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Form controls */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+/* Activity layout */
+.activity-container {
+    padding: 2rem 0;
+    min-height: 70vh;
+}
+.activity-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.activity-content h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.activity-content .description {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Tiles container and tiles */
+.tiles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.tile {
+    padding: 0.8rem;
+    background-color: var(--light-bg);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: move;
+    transition: background-color 0.2s;
+}
+.tile:hover {
+    background-color: #eef4ff;
+}
+.tile.dragging {
+    opacity: 0.6;
+}
+
+/* Result messages */
+.activity-result {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+.activity-result.success {
+    color: var(--pass-color);
+}
+.activity-result.error {
+    color: var(--fail-color);
+}
+
+/* Hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #e0e6f7;
+    padding: 1rem 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
