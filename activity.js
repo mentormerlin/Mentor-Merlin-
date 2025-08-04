@@ -145,13 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = sessionStorage.getItem('activity_userEmail');
             const timestamp = new Date().toISOString();
             const isCorrect = arraysEqual(currentOrder, correctOrder);
-            const resultObj = {
-                name,
-                email,
-                result: isCorrect ? 'Correct' : 'Incorrect',
-                submittedOrder: currentOrder.join(', '), // Convert array to string for Sheet
-                timestamp
+           const resultObj = {
+              name,
+              email,
+              result: isCorrect ? 'Correct' : 'Incorrect',
+              submittedOrder: currentOrder.join(', '), // convert array to string
+              timestamp
             };
+
 
             // Send the result to the Google Apps Script web app.  Replace YOUR_SCRIPT_ID
             // below with the ID from your deployed script.  The no‑cors mode prevents
