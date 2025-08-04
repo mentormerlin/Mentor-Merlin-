@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Send the result to the Google Apps Script web app.  Replace YOUR_SCRIPT_ID
             // below with the ID from your deployed script.  The no‑cors mode prevents
             // CORS issues but the response cannot be read in the browser.
-            fetch('https://script.google.com/macros/s/AKfycbwkK3V0khmW_BWsXkX4CCKvpl7Vo7fORXRUp33fYklwLdhSlmbIoyoYfmn-G7xvviX2/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbw7-Y4SvAlJdtEaEoECc_pVCkN9rV8Z0J5iOImVSsayz_vHs5750aJgqYgcd6dGu96dYw/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
