@@ -149,9 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 name,
                 email,
                 result: isCorrect ? 'Correct' : 'Incorrect',
-                timestamp,
-                order: currentOrder
+                submittedOrder: currentOrder.join(', '), // Convert array to string for Sheet
+                timestamp
             };
+
             // Send the result to the Google Apps Script web app.  Replace YOUR_SCRIPT_ID
             // below with the ID from your deployed script.  The no‑cors mode prevents
             // CORS issues but the response cannot be read in the browser.
